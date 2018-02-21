@@ -3,9 +3,17 @@
   <p>Cuisine: <%= @restaurant.category %></p>
   <p>Address: <%= @restaurant.address %></p>
   <h3>Reviews and Ratings:</h3>
+  <%= link_to "Leave a Review", new_restaurant_review_path(@restaurant) %>
   <ul>
     <% @reviews.each do |review| %>
-    <li><%= review.content %> (<%= review.rating %>)</li>
+    <li><%= review.content %>
+      <% review.rating.times do %>
+        <i class="glyphicon glyphicon-star"></i>
+      <% end %>
+      <% (5 - review.rating).times do %>
+        <i class="glyphicon glyphicon-star-empty"></i>
+      <% end %>
+      </li>
     <% end %>
   </ul>
   <%= link_to "Back to Restaurants", restaurants_path  %>
