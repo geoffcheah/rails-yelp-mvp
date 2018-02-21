@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>What restaurant to add?</h1>
+  <p>(We only track chinese, italian, belgian, french and japanese restaurants)</p>
+
+  <%= simple_form_for(@restaurant) do |f| %>
+      <%= f.input :name %>
+
+      <%= f.input :address%>
+
+      <%= f.input :category%>
+
+      <%= f.button :button %>
+  <% end %>
+
+</div>

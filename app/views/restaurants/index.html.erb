@@ -1,5 +1,4 @@
 <div class="container">
-  <h1>Yelp!</h1>
   <ul>
     <% @restaurants.each do |restaurant| %>
       <li><%= link_to restaurant.name, restaurant_path(restaurant) %> (<%= restaurant.category %>)</li>
