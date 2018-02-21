@@ -5,16 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "desroying previous seeds"
+Restaurant.destroy_all
 
 puts "Creating seeds"
 
 puts "Populating Database"
 
-Restaurant.create(name: "Tozi", address: "Victoria")
-Restaurant.create(name: "Goldmine", address: "Bayswater")
-Restaurant.create(name: "Sukiyaki Tei", address: "Chelsea")
-Restaurant.create(name: "Plum Valley", address: "China Town")
-Restaurant.create(name: "The Spoon", address: "Shoreditch")
+Restaurant.create(name: "Tozi", address: "Victoria", category: "italian")
+Restaurant.create(name: "Goldmine", address: "Bayswater", category: "chinese")
+Restaurant.create(name: "Sukiyaki Tei", address: "Chelsea", category: "japanese")
+Restaurant.create(name: "Plum Valley", address: "China Town", category: "chinese")
+Restaurant.create(name: "The Spoon", address: "Shoreditch", category: "french")
 
 
 puts "finished!"
